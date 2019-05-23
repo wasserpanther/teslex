@@ -4,13 +4,10 @@ defmodule Teslex do
   """
 
   @doc """
-  Hello world.
-
+  API Wrapper for Tesla API, currently only supports Tesla Vehicles, no support for Tesla Powerwall oder Tesla Solar.
   ## Examples
-
-      iex> Teslex.hello()
-      :world
-
+      t = Teslex.client("<Your Tesla API Token">)
+      t |> Teslex.getVehicle() will return all your vehicles, you can use the id of the vehicle as an argument for other functions
   """
   use Tesla
 
